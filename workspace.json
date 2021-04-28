@@ -1,30 +1,14 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
+  "cli": { "defaultCollection": "@nrwl/react" },
   "defaultProject": "home",
   "generators": {
     "@nrwl/react": {
-      "application": {
-        "style": "css",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "css"
-      },
-      "library": {
-        "style": "css",
-        "linter": "eslint"
-      }
+      "application": { "style": "css", "linter": "eslint", "babel": true },
+      "component": { "style": "css" },
+      "library": { "style": "css", "linter": "eslint" }
     },
-    "@nrwl/next": {
-      "application": {
-        "style": "css",
-        "linter": "eslint"
-      }
-    }
+    "@nrwl/next": { "application": { "style": "css", "linter": "eslint" } }
   },
   "projects": {
     "home": {
@@ -35,20 +19,12 @@
         "build": {
           "executor": "@nrwl/next:build",
           "outputs": ["{options.outputPath}"],
-          "options": {
-            "root": "apps/home",
-            "outputPath": "dist/apps/home"
-          },
-          "configurations": {
-            "production": {}
-          }
+          "options": { "root": "apps/home", "outputPath": "dist/apps/home" },
+          "configurations": { "production": {} }
         },
         "serve": {
           "executor": "@nrwl/next:server",
-          "options": {
-            "buildTarget": "home:build",
-            "dev": true
-          },
+          "options": { "buildTarget": "home:build", "dev": true },
           "configurations": {
             "production": {
               "buildTarget": "home:build:production",
@@ -58,9 +34,7 @@
         },
         "export": {
           "executor": "@nrwl/next:export",
-          "options": {
-            "buildTarget": "home:build:production"
-          }
+          "options": { "buildTarget": "home:build:production" }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -72,9 +46,7 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/home/**/*.{ts,tsx,js,jsx}"]
-          }
+          "options": { "lintFilePatterns": ["apps/home/**/*.{ts,tsx,js,jsx}"] }
         }
       }
     },
@@ -91,16 +63,12 @@
             "devServerTarget": "home:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "home:serve:production"
-            }
+            "production": { "devServerTarget": "home:serve:production" }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/home-e2e/**/*.{js,ts}"]
-          }
+          "options": { "lintFilePatterns": ["apps/home-e2e/**/*.{js,ts}"] }
         }
       }
     },
@@ -116,16 +84,11 @@
             "root": "apps/static",
             "outputPath": "dist/apps/static"
           },
-          "configurations": {
-            "production": {}
-          }
+          "configurations": { "production": {} }
         },
         "serve": {
           "executor": "@nrwl/next:server",
-          "options": {
-            "buildTarget": "static:build",
-            "dev": true
-          },
+          "options": { "buildTarget": "static:build", "dev": true },
           "configurations": {
             "production": {
               "buildTarget": "static:build:production",
@@ -135,9 +98,7 @@
         },
         "export": {
           "executor": "@nrwl/next:export",
-          "options": {
-            "buildTarget": "static:build:production"
-          }
+          "options": { "buildTarget": "static:build:production" }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -168,16 +129,12 @@
             "devServerTarget": "static:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "static:serve:production"
-            }
+            "production": { "devServerTarget": "static:serve:production" }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/static-e2e/**/*.{js,ts}"]
-          }
+          "options": { "lintFilePatterns": ["apps/static-e2e/**/*.{js,ts}"] }
         }
       }
     },
@@ -189,20 +146,12 @@
         "build": {
           "executor": "@nrwl/next:build",
           "outputs": ["{options.outputPath}"],
-          "options": {
-            "root": "apps/plp",
-            "outputPath": "dist/apps/plp"
-          },
-          "configurations": {
-            "production": {}
-          }
+          "options": { "root": "apps/plp", "outputPath": "dist/apps/plp" },
+          "configurations": { "production": {} }
         },
         "serve": {
           "executor": "@nrwl/next:server",
-          "options": {
-            "buildTarget": "plp:build",
-            "dev": true
-          },
+          "options": { "buildTarget": "plp:build", "dev": true },
           "configurations": {
             "production": {
               "buildTarget": "plp:build:production",
@@ -212,9 +161,7 @@
         },
         "export": {
           "executor": "@nrwl/next:export",
-          "options": {
-            "buildTarget": "plp:build:production"
-          }
+          "options": { "buildTarget": "plp:build:production" }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -226,9 +173,7 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/plp/**/*.{ts,tsx,js,jsx}"]
-          }
+          "options": { "lintFilePatterns": ["apps/plp/**/*.{ts,tsx,js,jsx}"] }
         }
       }
     },
@@ -245,15 +190,32 @@
             "devServerTarget": "plp:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "plp:serve:production"
-            }
+            "production": { "devServerTarget": "plp:serve:production" }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["apps/plp-e2e/**/*.{js,ts}"] }
+        }
+      }
+    },
+    "header": {
+      "root": "libs/header",
+      "sourceRoot": "libs/header/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/plp-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["libs/header/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/header"],
+          "options": {
+            "jestConfig": "libs/header/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
