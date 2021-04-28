@@ -25,6 +25,20 @@
     "home-e2e": {
       "tags": [],
       "implicitDependencies": ["home"]
+    },
+    "static": {
+      "tags": []
+    },
+    "static-e2e": {
+      "tags": [],
+      "implicitDependencies": ["static"]
+    },
+    "plp": {
+      "tags": []
+    },
+    "plp-e2e": {
+      "tags": [],
+      "implicitDependencies": ["plp"]
     }
   }
 }
