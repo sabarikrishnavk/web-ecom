@@ -108,6 +108,18 @@
             "passWithNoTests": true
           }
         },
+        "docker": {
+          "builder": "@nx-tools/nx-docker:build",
+          "options": {
+            "file": "apps/static/Dockerfile",
+            "push": false,
+            "tags": ["ecom/static:latest"],
+            "meta": {
+              "enabled": true,
+              "mode": "prepend"
+            }
+          }
+        },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
